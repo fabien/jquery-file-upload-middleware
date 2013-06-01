@@ -46,8 +46,8 @@ JqueryFileUploadMiddleware.prototype.configure = function (options) {
     this.options = this.prepareOptions(options);
 };
 
-JqueryFileUploadMiddleware.prototype.fileHandler = function (options) {
-    return require('./lib/filehandler')(this, this.prepareOptions(_.extend(this.options, options)));
+JqueryFileUploadMiddleware.prototype.fileHandler = function (options, callback) {
+    return require('./lib/filehandler')(this, this.prepareOptions(_.extend(this.options, options)), callback);
 };
 
 JqueryFileUploadMiddleware.prototype.fileManager = function (options) {

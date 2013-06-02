@@ -47,11 +47,11 @@ JqueryFileUploadMiddleware.prototype.configure = function (options) {
 };
 
 JqueryFileUploadMiddleware.prototype.fileHandler = function (options, callback) {
-    return require('./lib/filehandler')(this, this.prepareOptions(_.extend(this.options, options)), callback);
+    return require('./lib/filehandler')(this, this.prepareOptions(_.extend({}, this.options, options)), callback);
 };
 
 JqueryFileUploadMiddleware.prototype.fileManager = function (options) {
-    return require('./lib/filemanager')(this, this.prepareOptions(_.extend(this.options, options)));
+    return require('./lib/filemanager')(this, this.prepareOptions(_.extend({}, this.options, options)));
 };
 
 module.exports = new JqueryFileUploadMiddleware();

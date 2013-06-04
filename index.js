@@ -24,6 +24,8 @@ JqueryFileUploadMiddleware.prototype.prepareOptions = function (options) {
 //                height: 80
 //            }
         },
+        fallbackUrl: false, // string/function
+        fallbackType: 'png',
         accessControl: {
             allowOrigin: '*',
             allowMethods: 'OPTIONS, HEAD, GET, POST, PUT, DELETE'
